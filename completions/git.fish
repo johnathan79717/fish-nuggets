@@ -68,6 +68,7 @@ complete -c git -n '__fish_use_subcommand' -x -a gc --description 'Cleanup unnec
 
 
 complete -c git -n 'contains \'checkout\' (commandline -poc)' -a '(__git_branch_list)' --description "Check out this branch"
+complete -c git -n 'contains \'co\' (commandline -poc)' -a '(__git_branch_list)' --description "Check out this branch"
 # complete -c git -n 'contains \'branch\' (commandline -poc)' -a '(git_br())' -f --description "Git branch"
 
 #
@@ -81,6 +82,16 @@ complete -c git -n 'contains \'checkout\' (commandline -poc)' -s q -x --descript
 complete -c git -n 'contains \'checkout\' (commandline -poc)' -s b -x --description '<branch name>'
 complete -c git -n 'contains \'checkout\' (commandline -poc)' -s f -x --description 'Throw away local changes'
 
+#
+# Completions for the 'co' subcommand (alias for checkout)
+#
+
+complete -c git -n 'contains \'co\' (commandline -poc)' -l track -x --description '--no-track options, which will be passed to git branch'
+complete -c git -n 'contains \'co\' (commandline -poc)' -l no-track -x --description 'Given'
+complete -c git -n 'contains \'co\' (commandline -poc)' -l hard -x --description 'To further move around, for example. You'
+complete -c git -n 'contains \'co\' (commandline -poc)' -s q -x --description 'Suppress feedback messages'
+complete -c git -n 'contains \'co\' (commandline -poc)' -s b -x --description '<branch name>'
+complete -c git -n 'contains \'co\' (commandline -poc)' -s f -x --description 'Throw away local changes'
 
 #
 # Completions for the 'clone' subcommand

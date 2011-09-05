@@ -1,4 +1,4 @@
-for p in /usr/bin /usr/local/bin ~/bin ~/.config/fish/bin 
+for p in /usr/bin /usr/local/bin ~/bin
   if test -d $p
     set -x PATH $p $PATH
   end

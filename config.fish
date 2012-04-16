@@ -12,7 +12,7 @@ if test -f ~/.rvm/scripts/rvm
     
     # apply rvm_* and *PATH variables from the captured environment
     # omit rvm_error_message, which is problematic
-    grep '^rvm\|^[^=]*PATH' $env_file | sed '/^[^=]*PATH/y/:/ /; s/^/set -xg /; s/=/ /; s/$/ ;/' | grep -v 'rvm_error_message' > ~/.config/fish/rvm.local.fish
+    grep '^rvm\|^[^=]*PATH' $env_file | sed '/^[^=]*PATH/y/:/ /; s/\(.*\)=\(.*\)$/set -xg \1 "\2";/' | grep -v 'rvm_error_message' > ~/.config/fish/rvm.local.fish
 
     # clean up
     rm -f $env_file

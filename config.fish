@@ -31,3 +31,5 @@ set -x EDITOR "vim"
 set -x BROWSER open
 set -x CLICOLOR 1
 set fish_greeting ""
+
+set -x PATH /usr/local/opt/coreutils/libexec/gnubin /usr/local/git/bin $PATH

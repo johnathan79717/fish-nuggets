@@ -4,7 +4,10 @@ function problem
         set rel_template_path "$rel_template_path/.."
     end
     set dir $argv[1]
-    set libs $argv[2..(count $argv)]
+    set argc (count $argv)
+    if [ $argc -gt 1 ]
+        set libs $argv[2..$argc]
+    end
     mkdir -p $dir
     if not contains main.cc (ls $dir)
         set main "$dir/main.cc"

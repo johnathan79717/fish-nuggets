@@ -43,5 +43,6 @@ alias g11="g++ -std=c++11 -g"
 alias gco="git checkout"
 alias gb="git branch"
 alias gst="git status"
+alias ga="git add"
 
 #set -x DYLD_LIBRARY_PATH /Volumes/gecko/mozilla-central/obj-x86_64-apple-darwin14.5.0/dist/lib/ /Volumes/gecko/mozilla-central/obj-x86_64-apple-darwin14.5.0/dist/sdk/lib/ /Volumes/gecko/mozilla-central/obj-x86_64-apple-darwin14.5.0/dist/bin/

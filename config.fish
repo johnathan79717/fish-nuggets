@@ -57,6 +57,8 @@ alias gd="git diff"
 alias gp="git push"
 alias gf="git fetch"
 alias gm="git merge"
+alias gci="git commit"
+alias gsh="git stash"
 alias dcj="/Users/jonathan/odrive/Dropbox/Competitive_Programming/DCJ/dcj_mac_os/dcj.sh"
 alias tmux="tmux -S /tmp/tmux-socket"
 

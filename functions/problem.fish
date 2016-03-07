@@ -13,9 +13,9 @@ function problem
         set main "$dir/main.cc"
         cat "/Users/jonathan/Dropbox/Competitive_Programming/template.h" >> $main
         for lib in $libs
-            cat "/Users/jonathan/Dropbox/Competitive_Programming/CodeBook/$lib" >> $main
+            cat "/Users/jonathan/Workspace/codebook/$lib" >> $main
         end
-        cat "$rel_template_path/template.cc" >> "$dir/main.cc"
+        cat "$rel_template_path/template.cc" >> $main
     end
     cd $dir
     vim main.cc

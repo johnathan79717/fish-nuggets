@@ -32,17 +32,29 @@ set -x BROWSER open
 set -x CLICOLOR 1
 set fish_greeting ""
 
-set -x PATH /usr/local/opt/coreutils/libexec/gnubin /usr/local/git/bin $PATH /Volumes/gecko/mozilla-central/obj-x86_64-apple-darwin14.5.0/dist/bin
+set -x GOPATH ~/go
+
+set -x OBJDIR /Users/jonathan/Workspace/mozilla-central/obj-x86_64-apple-darwin15.0.0
+set -x PATH /usr/local/sbin /usr/local/opt/coreutils/libexec/gnubin /usr/local/git/bin $PATH $OBJDIR/dist/bin $GOPATH/bin
+#set -x DYLD_LIBRARY_PATH $OBJDIR/dist/lib $OBJDIR/dist/sdk/lib
+#set -x DYLD_LIBRARY_PATH /Users/jonathan/Workspace/fxos-package-signing-tool/lib
+
+set -x LC_ALL en_US.UTF-8
+set -x LANG=en_US.UTF-8
+
 alias tk="tmux kill-session -t"
 alias tn="tmux new -s"
 alias ta="tmux attach"
 alias tat="tmux attach -t"
 alias tls="tmux ls"
 alias tsf="tmux source-file ~/.tmux.conf"
-alias g11="g++ -std=c++11 -g"
+alias g11="g++ -std=c++11 -g -DCPP11"
 alias gco="git checkout"
 alias gb="git branch"
 alias gst="git status"
 alias ga="git add"
-
-#set -x DYLD_LIBRARY_PATH /Volumes/gecko/mozilla-central/obj-x86_64-apple-darwin14.5.0/dist/lib/ /Volumes/gecko/mozilla-central/obj-x86_64-apple-darwin14.5.0/dist/sdk/lib/ /Volumes/gecko/mozilla-central/obj-x86_64-apple-darwin14.5.0/dist/bin/
+alias gd="git diff"
+alias gp="git push"
+alias gf="git fetch"
+alias gm="git merge"
+alias dcj="/Users/jonathan/odrive/Dropbox/Competitive_Programming/DCJ/dcj_mac_os/dcj.sh"

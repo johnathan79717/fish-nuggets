@@ -43,9 +43,6 @@ set -x LC_ALL en_US.UTF-8
 set -x LANG=en_US.UTF-8
 
 alias tk="tmux kill-session -t"
-alias tn="tmux new -s"
-alias ta="tmux attach"
-alias tat="tmux attach -t"
 alias tls="tmux ls"
 alias tsf="tmux source-file ~/.tmux.conf"
 alias g11="g++ -std=c++11 -g -DCPP11"

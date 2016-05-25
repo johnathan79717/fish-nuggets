@@ -35,7 +35,7 @@ set fish_greeting ""
 set -x GOPATH ~/go
 
 set -x OBJDIR /Users/jonathan/Workspace/mozilla-central/obj-x86_64-apple-darwin15.0.0
-set -x PATH /usr/local/sbin /usr/local/opt/coreutils/libexec/gnubin /usr/local/git/bin $PATH $OBJDIR/dist/bin $GOPATH/bin ~/rr/rr/obj/bin
+set -x PATH /usr/local/sbin /usr/local/opt/coreutils/libexec/gnubin /usr/local/git/bin $PATH $OBJDIR/dist/bin $GOPATH/bin ~/rr/rr/obj/bin ~/src/git-cinnabar ~/moz-git-tools ~/stgit
 #set -x DYLD_LIBRARY_PATH $OBJDIR/dist/lib $OBJDIR/dist/sdk/lib
 #set -x DYLD_LIBRARY_PATH /Users/jonathan/Workspace/fxos-package-signing-tool/lib
 

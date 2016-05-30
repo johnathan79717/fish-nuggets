@@ -58,5 +58,8 @@ alias gci="git commit"
 alias gsh="git stash"
 alias dcj="/Users/jonathan/odrive/Dropbox/Competitive_Programming/DCJ/dcj_mac_os/dcj.sh"
 alias tmux="tmux -S /tmp/tmux-socket"
+alias gse="stg series -d"
+alias gpo="stg pop"
+alias gpu="stg push"
 
 #set -x DYLD_LIBRARY_PATH /Volumes/gecko/mozilla-central/obj-x86_64-apple-darwin14.5.0/dist/lib/ /Volumes/gecko/mozilla-central/obj-x86_64-apple-darwin14.5.0/dist/sdk/lib/ /Volumes/gecko/mozilla-central/obj-x86_64-apple-darwin14.5.0/dist/bin/

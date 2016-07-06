@@ -35,7 +35,7 @@ set fish_greeting ""
 set -x GOPATH ~/go
 
 set -x OBJDIR /Users/jonathan/Workspace/mozilla-central/obj-x86_64-apple-darwin15.0.0
-set -x PATH /usr/local/sbin /usr/local/opt/coreutils/libexec/gnubin /usr/local/git/bin $PATH $OBJDIR/dist/bin $GOPATH/bin ~/rr/rr/obj/bin ~/src/git-cinnabar ~/moz-git-tools ~/stgit
+set -x PATH /usr/local/Cellar/git/2.8.4/bin /usr/local/sbin /usr/local/opt/coreutils/libexec/gnubin $PATH $OBJDIR/dist/bin $GOPATH/bin ~/rr/rr/obj/bin ~/git-cinnabar ~/moz-git-tools ~/stgit
 #set -x DYLD_LIBRARY_PATH $OBJDIR/dist/lib $OBJDIR/dist/sdk/lib
 #set -x DYLD_LIBRARY_PATH /Users/jonathan/Workspace/fxos-package-signing-tool/lib
 
@@ -55,11 +55,14 @@ alias gp="git push"
 alias gf="git fetch"
 alias gm="git merge"
 alias gci="git commit"
-alias gsh="git stash"
 alias dcj="/Users/jonathan/Workspace/competitive-programming/DCJ/dcj_mac_os/dcj.sh"
 alias tmux="tmux -S /tmp/tmux-socket"
 alias gse="stg series -d"
 alias gpo="stg pop"
 alias gpu="stg push"
+alias gref="stg refresh"
+alias gnew="stg new"
+alias gsh="stg show"
+alias gsq="stg squash"
 
 #set -x DYLD_LIBRARY_PATH /Volumes/gecko/mozilla-central/obj-x86_64-apple-darwin14.5.0/dist/lib/ /Volumes/gecko/mozilla-central/obj-x86_64-apple-darwin14.5.0/dist/sdk/lib/ /Volumes/gecko/mozilla-central/obj-x86_64-apple-darwin14.5.0/dist/bin/

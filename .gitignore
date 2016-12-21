@@ -3,3 +3,4 @@ fish_read_history
 fishd.*
 config.local.fish
 rvm.local.fish
+.DS_Store

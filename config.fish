@@ -35,12 +35,9 @@ set fish_greeting ""
 set -x GOPATH ~/go
 
 set -x OBJDIR /Users/jonathan/Workspace/mozilla-central/obj-x86_64-apple-darwin15.0.0
-set -x PATH /usr/local/Cellar/git/2.8.4/bin /usr/local/sbin /usr/local/opt/coreutils/libexec/gnubin $PATH $OBJDIR/dist/bin $GOPATH/bin ~/rr/rr/obj/bin ~/git-cinnabar ~/moz-git-tools ~/stgit
+#set -x PATH /usr/local/Cellar/git/2.8.4/bin /usr/local/sbin /usr/local/opt/coreutils/libexec/gnubin $PATH $OBJDIR/dist/bin $GOPATH/bin ~/rr/rr/obj/bin ~/git-cinnabar ~/moz-git-tools ~/stgit
 #set -x DYLD_LIBRARY_PATH $OBJDIR/dist/lib $OBJDIR/dist/sdk/lib
 #set -x DYLD_LIBRARY_PATH /Users/jonathan/Workspace/fxos-package-signing-tool/lib
-
-set -x LC_ALL en_US.UTF-8
-set -x LANG=en_US.UTF-8
 
 alias tk="tmux kill-session -t"
 alias tls="tmux ls"

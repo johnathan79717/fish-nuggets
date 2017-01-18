@@ -1,3 +1,8 @@
+set -x USE_SCHEDULER "icecc-scheduler.corp.tpe1.mozilla.com"
+set -x Qt5_DIR (brew --prefix)/opt/qt5
+set -x CCACHE_COMPRESS ""
+set -x PAGER "diff-so-fancy | less --tabs=4 -RFX"
+
 # pull in a local, ignored-by-git config file
 if test -f ~/.config/fish/config.local.fish
   . ~/.config/fish/config.local.fish
@@ -35,6 +40,7 @@ set fish_greeting ""
 set -x GOPATH ~/go
 
 set -x OBJDIR /Users/jonathan/Workspace/mozilla-central/obj-x86_64-apple-darwin15.0.0
+set -x PATH $PATH ~/git-cinnabar ~/moz-git-tools ~/stgit ~/.cargo/bin ~/.mozbuild/version-control-tools/git/commands
 #set -x PATH /usr/local/Cellar/git/2.8.4/bin /usr/local/sbin /usr/local/opt/coreutils/libexec/gnubin $PATH $OBJDIR/dist/bin $GOPATH/bin ~/rr/rr/obj/bin ~/git-cinnabar ~/moz-git-tools ~/stgit
 #set -x DYLD_LIBRARY_PATH $OBJDIR/dist/lib $OBJDIR/dist/sdk/lib
 #set -x DYLD_LIBRARY_PATH /Users/jonathan/Workspace/fxos-package-signing-tool/lib

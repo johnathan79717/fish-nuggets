@@ -11,9 +11,9 @@ function problem
     mkdir -p $dir
     if not contains main.cc (ls $dir)
         set main "$dir/main.cc"
-        cat "/Users/jonathan/Dropbox/Competitive_Programming/template.h" >> $main
+        cat "/Users/jhao/Workspace/competitive-programming/template.h" >> $main
         for lib in $libs
-            cat "/Users/jonathan/Workspace/codebook/$lib" >> $main
+            cat "/Users/jhao/Workspace/codebook/$lib" >> $main
         end
         cat "$rel_template_path/template.cc" >> $main
     end

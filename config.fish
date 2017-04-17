@@ -1,8 +1,9 @@
+set -x CCACHE_COMPRESS ""
 set -x USE_SCHEDULER "icecc-scheduler.corp.tpe1.mozilla.com"
 set -x Qt5_DIR (brew --prefix)/opt/qt5
 set -x CCACHE_COMPRESS ""
 set -x PAGER "diff-so-fancy | less --tabs=4 -RFX"
-eval(thefuck --alias)
+# eval (thefuck --alias)
 set -x PATH $PATH ~/git-cinnabar ~/.mozbuild/version-control-tools/git/commands ~/stgit ~/moz-git-tools ~/.cargo/bin
 # pull in a local, ignored-by-git config file
 if test -f ~/.config/fish/config.local.fish

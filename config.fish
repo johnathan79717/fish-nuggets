@@ -1,10 +1,39 @@
+set -x CRITIQUE_EDITOR 'export CRITIQUE_FILE=%s; export CRITIQUE_LINE=%s; export CRITIQUE_COL=%s; vim +$CRITIQUE_LINE $CRITIQUE_FILE'
+
+set -x PATH ~/stgit /Users/phao/perl5/bin $PATH ^/dev/null;
+set -q PERL5LIB; and set -x PERL5LIB ~/workspace/main/lib:/Users/phao/perl5/lib/perl5:$PERL5LIB;
+set -q PERL5LIB; or set -x PERL5LIB ~/workspace/main/lib:/Users/phao/perl5/lib/perl5;
+set -q PERL_LOCAL_LIB_ROOT; and set -x PERL_LOCAL_LIB_ROOT /Users/phao/perl5:$PERL_LOCAL_LIB_ROOT;
+set -q PERL_LOCAL_LIB_ROOT; or set -x PERL_LOCAL_LIB_ROOT /Users/phao/perl5;
+set -x PERL_MB_OPT --install_base\ \"/Users/phao/perl5\";
+set -x PERL_MM_OPT INSTALL_BASE=/Users/phao/perl5;
+
+set proxy http://webproxy.corp.booking.com:3128
+set -x http_proxy $proxy
+set -x ftp_proxy $proxy
+set -x rsync_proxy $proxy
+set -x https_proxy $proxy
+set -x no_proxy localhost,127.0.0.1,localaddress,.localdomain.com,git.booking.com
+set -x all_proxy $proxy
+set -x npm_config_proxy $proxy
+set -x npm_config_https_proxy $proxy
+
+
+set -x DRIVE_SYNC_FORCE_PROXY http://webproxy.corp.booking.com:3128
+# set -x http_proxy http://webproxy.corp.booking.com:3128
+# set -x https_proxy http://webproxy.corp.booking.com:3128
+# set -x HTTP_PROXY http://webproxy.corp.booking.com:3128
+# set -x HTTPS_PROXY http://webproxy.corp.booking.com:3128
+# set -x all_proxy http://webproxy.corp.booking.com:3128
+# set -x npm_config_proxy http://webproxy.corp.booking.com:3128
+# set -x npm_config_https_proxy http://webproxy.corp.booking.com:3128
+
 set -x CCACHE_COMPRESS ""
 set -x USE_SCHEDULER "icecc-scheduler.corp.tpe1.mozilla.com"
-set -x Qt5_DIR (brew --prefix)/opt/qt5
+#set -x Qt5_DIR (brew --prefix)/opt/qt5
 set -x CCACHE_COMPRESS ""
 set -x PAGER "diff-so-fancy | less --tabs=4 -RFX"
 # eval (thefuck --alias)
-set -x PATH $PATH ~/git-cinnabar ~/.mozbuild/version-control-tools/git/commands ~/stgit ~/moz-git-tools ~/.cargo/bin
 # pull in a local, ignored-by-git config file
 if test -f ~/.config/fish/config.local.fish
   . ~/.config/fish/config.local.fish
@@ -42,11 +71,13 @@ set fish_greeting ""
 set -x GOPATH ~/go
 
 set -x OBJDIR /Users/jonathan/Workspace/mozilla-central/obj-x86_64-apple-darwin15.0.0
-set -x PATH $PATH ~/git-cinnabar ~/moz-git-tools ~/stgit ~/.cargo/bin ~/.mozbuild/version-control-tools/git/commands
-#set -x PATH /usr/local/Cellar/git/2.8.4/bin /usr/local/sbin /usr/local/opt/coreutils/libexec/gnubin $PATH $OBJDIR/dist/bin $GOPATH/bin ~/rr/rr/obj/bin ~/git-cinnabar ~/moz-git-tools ~/stgit
+#set -x PATH /usr/local/Cellar/git/2.8.4/bin /usr/local/sbin /usr/local/opt/coreutils/libexec/gnubin $PATH $OBJDIR/dist/bin $GOPATH/bin ~/rr/rr/obj/bin
 #set -x DYLD_LIBRARY_PATH $OBJDIR/dist/lib $OBJDIR/dist/sdk/lib
 #set -x DYLD_LIBRARY_PATH /Users/jonathan/Workspace/fxos-package-signing-tool/lib
 
+alias g="git grep -a -n"
+alias f="find . -name"
+alias sshb "ssh ssh.booking.com"
 alias tk="tmux kill-session -t"
 alias tls="tmux ls"
 alias tsf="tmux source-file ~/.tmux.conf"
@@ -54,9 +85,11 @@ alias g11="g++ -std=c++11 -g -DCPP11"
 alias gco="git checkout"
 alias gb="git branch"
 alias gst="git status"
+alias gsh="git show"
 alias ga="git add"
 alias gd="git diff"
-alias gp="git push"
+alias gpu="git push"
+alias gpl="git pull --rebase"
 alias gf="git fetch"
 alias gm="git merge"
 alias gci="git commit"

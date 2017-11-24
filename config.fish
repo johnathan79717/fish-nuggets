@@ -32,7 +32,6 @@ set -x CCACHE_COMPRESS ""
 set -x USE_SCHEDULER "icecc-scheduler.corp.tpe1.mozilla.com"
 #set -x Qt5_DIR (brew --prefix)/opt/qt5
 set -x CCACHE_COMPRESS ""
-set -x PAGER "diff-so-fancy | less --tabs=4 -RFX"
 # eval (thefuck --alias)
 # pull in a local, ignored-by-git config file
 if test -f ~/.config/fish/config.local.fish
@@ -76,6 +75,7 @@ set -x OBJDIR /Users/jonathan/Workspace/mozilla-central/obj-x86_64-apple-darwin1
 #set -x DYLD_LIBRARY_PATH /Users/jonathan/Workspace/fxos-package-signing-tool/lib
 
 alias g="git grep -a -n"
+alias gl="git log"
 alias f="find . -name"
 alias sshb "ssh ssh.booking.com"
 alias tk="tmux kill-session -t"
@@ -103,5 +103,6 @@ alias snew="stg new"
 alias ssho="stg show"
 alias ssq="stg squash"
 alias sd="stg diff"
+alias gg="git grep -n"
 
 #set -x DYLD_LIBRARY_PATH /Volumes/gecko/mozilla-central/obj-x86_64-apple-darwin14.5.0/dist/lib/ /Volumes/gecko/mozilla-central/obj-x86_64-apple-darwin14.5.0/dist/sdk/lib/ /Volumes/gecko/mozilla-central/obj-x86_64-apple-darwin14.5.0/dist/bin/

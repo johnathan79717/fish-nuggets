@@ -4,3 +4,5 @@ fishd.*
 config.local.fish
 rvm.local.fish
 .DS_Store
+fish_user_key_bindings.fish
+fzf_key_bindings.fish
